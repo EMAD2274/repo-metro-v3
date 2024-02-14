@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
     to: options.email, // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
-    html: , // html body
+    html: emailTemplate(options.api), // html body
   });
 
   console.log("Message sent: %s", info.messageId);
