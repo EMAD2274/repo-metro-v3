@@ -1,7 +1,7 @@
 
 
 import nodemailer from 'nodemailer';
-import { emailTemplate } from './emailTemplate.js';
+
 
 
 export async function sendEmail(options) {
@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
     to: options.email, // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
-    html: emailTemplate(options.api), // html body
+    html:  // html body
   });
 
   console.log("Message sent: %s", info.messageId);
